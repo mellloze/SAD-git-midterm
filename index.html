@@ -12,4 +12,39 @@
       padding: 50px;
       transition: background 0.25s, color 0.25s;
     }
+    #theme-toggle-button {
+      display: inline-block;
+      width: 70px;
+      cursor: pointer;
+    }
+
+    #toggle {
+      position: absolute;
+      opacity: 0;
+      width: 1px;
+      height: 1px;
+    }
+
+    svg {
+      width: 70px;
+    }
+     </style>
+</head>
+
+<body>
+  <h1>Day and Night Theme</h1>
+  <p>Click the toggle to change the theme.</p>
     
+    <label id="theme-toggle-button">
+    <input type="checkbox" id="toggle">
+
+    <svg viewBox="0 0 70 44" xmlns="http://www.w3.org/2000/svg">
+      <rect id="container" width="70" height="44" rx="22"/>
+      <circle id="button" cx="22" cy="22" r="18"/>
+      <circle id="sun" cx="22" cy="22" r="7" fill="#f1c40f"/>
+      <circle id="moon" cx="50" cy="22" r="7" fill="#f1c40f"/>
+    </svg>
+  </label>
+
+  </body>
+</html>
