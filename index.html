@@ -1,6 +1,9 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Day and Night Toggle</title>
 
   <style>
@@ -27,6 +30,51 @@
 
     svg {
       width: 70px;
+    }
+
+    /* Patris: Day and night effects */
+
+    #container {
+      fill: #b9d8f5;
+      transition: fill 0.25s;
+    }
+
+    #button {
+      fill: white;
+      transition: transform 0.25s;
+    }
+
+    #toggle:checked + svg #container {
+      fill: #2b4360;
+    }
+
+    #toggle:checked + svg #button {
+      transform: translate(28px, 0);
+    }
+
+    #sun, #moon {
+      transition: opacity 0.25s;
+    }
+
+    #sun {
+      opacity: 1;
+    }
+
+    #moon {
+      opacity: 0;
+    }
+
+    #toggle:checked + svg #sun {
+      opacity: 0;
+    }
+
+    #toggle:checked + svg #moon {
+      opacity: 1;
+    }
+
+    body.dark {
+      background: #17212f;
+      color: white;
     }
      </style>
 </head>
