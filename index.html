@@ -32,8 +32,6 @@
       width: 70px;
     }
 
-    /* Patris: Day and night effects */
-
     #container {
       fill: #b9d8f5;
       transition: fill 0.25s;
@@ -94,5 +92,12 @@
     </svg>
   </label>
 
-  </body>
+  <script>
+    const toggle = document.getElementById("toggle");
+
+    toggle.addEventListener("change", function () {
+      document.body.classList.toggle("dark", toggle.checked);
+    });
+  </script>
+</body>
 </html>
